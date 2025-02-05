@@ -46,13 +46,12 @@ class Record:
         else:
             raise ValueError("Phone number not found.")
 
-def edit_phone(self, old_phone, new_phone):
-    if not self.find_phone(old_phone):
-        raise ValueError("Phone number not found.")
-        
-    self.remove_phone(old_phone)
-    
-    self.add_phone(new_phone)
+    def edit_phone(self, old_phone, new_phone):
+        if not self.find_phone(old_phone):
+            raise ValueError("Phone number not found.")
+        self.add_phone(new_phone)       
+        self.remove_phone(old_phone)
+           
 
 
     def find_phone(self, phone):
